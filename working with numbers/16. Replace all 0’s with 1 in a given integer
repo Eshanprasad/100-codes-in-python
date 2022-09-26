@@ -1,0 +1,8 @@
+# 120014 needs to be printed as 121114
+
+n = input('enter the number: ')
+l = list(n)
+for ele in l:
+    if ele == '0':
+        l[l.index(ele)] = '1'
+print(int(''.join(l)))
