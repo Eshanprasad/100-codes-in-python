@@ -1,0 +1,10 @@
+inp = int(input('enter the number of inputs: '))
+l = []
+Hcf = 1
+for i in range(inp):
+    l.append(int(input('enter the number: ')))
+l.sort()
+for i in range(1, l[0]+1):
+    if all(ele%i == 0 for ele in l):
+        Hcf = i
+print("HCF of given %s numbers is %s"%(inp, Hcf))
