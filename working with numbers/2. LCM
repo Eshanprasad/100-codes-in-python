@@ -1,0 +1,13 @@
+Lcm = None
+inp = int(input('enter the number if values: '))
+l = []
+for i in range(inp):
+    l.append(int(input()))
+l.sort(reverse=True)
+i = l[0]
+while i>=l[0]:
+    if all(i%val == 0 for val in l):
+        lcm = i
+        break
+    i += 1
+print("LCM of given {} numbers is {}".format(inp, lcm))
